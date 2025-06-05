@@ -64,59 +64,71 @@ Ensure that the dataset and embeddings are placed in the correct directories and
 Install Python dependencies:
 
 ```bash
-pip install -r requirements.txt```
+pip install -r requirements.txt
 
 
+###⚙️ Prerequisites and Setup
+
+System Dependencies
 Important Note on Graphviz (for model plotting):
+
 The pydot library, used for visualizing the model architecture, requires Graphviz to be installed on your system. This is a system dependency, not just a Python package.
 
-Installation Instructions for Graphviz: Please refer to the official Graphviz download page: https://graphviz.gitlab.io/download/
+Installation Instructions: Please refer to the official Graphviz download page:
+https://graphviz.gitlab.io/download/
 
-After installing Graphviz, ensure that its bin directory is added to your system's PATH environment variable. If plot_model in Keras still fails, you might need to restart your machine or your development environment.
+PATH Configuration: After installing Graphviz, ensure that its bin directory is added to your system's PATH environment variable.
+
+Troubleshooting: If plot_model in Keras still fails after installation and PATH configuration, you might need to restart your machine or your development environment (e.g., Jupyter kernel, IDE).
 
 NLTK Resources
-The notebook and script will attempt to download necessary NLTK resources (stopwords, wordnet, omw-1.4, punkt) if they are not found. Ensure you have an internet connection during the first run.
+The notebook and script will attempt to download necessary NLTK resources (stopwords, wordnet, omw-1.4, punkt) if they are not found. Please ensure you have an active internet connection during the first run to allow these downloads.
 
 How to Run
 Jupyter Notebook (Emotion_with_lstm.ipynb)
-Ensure all dependencies from requirements.txt are installed and Graphviz is set up if you want model plots.
+Dependencies: Ensure all Python dependencies listed in requirements.txt are installed.
 
-Place the dataset files (train.txt, val.txt, test.txt) in a subdirectory named Dataset.
+Graphviz: Confirm Graphviz is installed on your system and configured in your PATH if you wish to generate model architecture plots.
 
-Place the GloVe embeddings file (glove.6B.200d.txt) in a subdirectory named Glove.
+Dataset:
 
-Open the notebook using Jupyter Lab or Jupyter Notebook.
+Place the dataset files (train.txt, val.txt, test.txt) in a subdirectory named Dataset within your project folder.
 
-Run the cells sequentially from top to bottom.
+GloVe Embeddings:
 
-Follow the same setup steps as for the Jupyter Notebook (dependencies, dataset, GloVe).
+Place the GloVe embeddings file (glove.6B.200d.txt) in a subdirectory named Glove within your project folder.
 
-Project Structure
-Emotion_with_lstm.ipynb: Jupyter Notebook with detailed steps for data exploration, preprocessing, model training, and evaluation.
+Launch Notebook: Open Emotion_with_lstm.ipynb using Jupyter Lab or Jupyter Notebook.
 
-Emotion_Recognition_Final_Model.keras: The trained model will be saved as this given name.
+Execute Cells: Run the cells sequentially from top to bottom.
 
-tokenizer.json: Keras tokenizer will be saved as.
+(Note: The main.py script, if used, requires the same setup steps as the Jupyter Notebook for dependencies, dataset, and GloVe files.)
 
-label_encoder.npy: label encoder classes will be saved as.
+Project Structure & Key Files
+Emotion_with_lstm.ipynb: The primary Jupyter Notebook containing detailed steps for data exploration, preprocessing, model training, and evaluation.
+
+Emotion_Recognition_Final_Model.keras: The trained Keras model will be saved with this filename after successful training.
+
+tokenizer.json: The Keras tokenizer, configured during preprocessing, will be saved in this JSON file.
+
+label_encoder.npy: The label encoder classes (mapping emotions to numerical values) will be saved in this NumPy file.
 
 Model Details (Brief)
-Architecture: Bidirectional LSTM with GloVe embeddings.
+Architecture: Bidirectional LSTM network utilizing pre-trained GloVe word embeddings.
 
 Optimizer: Adam.
 
 Loss Function: Categorical Cross-Entropy.
 
-Refer to the Model Card document for comprehensive details on the model, training, and evaluation.
+For comprehensive details on the model, its training procedure, and in-depth evaluation, please refer to the accompanying Model Card document.
 
 Limitations & Ethical Considerations
-Language Bias: The model may inherit biases from the training data and GloVe embeddings.
+Language Bias: The model may inherit biases from the training data and the pre-trained GloVe embeddings.
 
-Context & Sarcasm: The model does not deeply understand context, irony, or sarcasm.
+Context & Sarcasm: The model does not deeply understand complex linguistic nuances such as context, irony, or sarcasm.
 
-Dataset Representativeness: The dataset is primarily from social media and may not generalize perfectly to other text forms.
+Dataset Representativeness: The dataset is primarily sourced from social media and may not generalize perfectly to other forms of text or all emotional expressions.
 
-Fixed Emotion Set: Limited to the six predefined emotions.
+Fixed Emotion Set: The model is limited to classifying text into the six predefined emotions (joy, sadness, anger, fear, love, surprise).
 
-Please see the Model Card for a full discussion.
-
+A full discussion of these points and other considerations can be found in the Model Card document.

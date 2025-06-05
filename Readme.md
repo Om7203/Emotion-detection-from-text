@@ -64,7 +64,8 @@ Ensure that the dataset and embeddings are placed in the correct directories and
 Install Python dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt```
+
 
 Important Note on Graphviz (for model plotting):
 The pydot library, used for visualizing the model architecture, requires Graphviz to be installed on your system. This is a system dependency, not just a Python package.

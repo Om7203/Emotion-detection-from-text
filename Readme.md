@@ -1,31 +1,40 @@
-Emotion Detection in Text using LSTMs
+# 🎭 Emotion Detection in Text using LSTMs
 
-Project Overview
-This project develops a deep learning model to detect emotions from text, specifically from social media-style messages (tweets, comments). The model classifies text into one of six emotion categories: joy, sadness, anger, fear, love, and surprise.
+## 📘 Project Overview
 
-The primary motivation is to analyze online sentiment to gain insights into public opinion, identify urgent needs in crisis communication scenarios, or track the emotional impact of events.
+This project develops a deep learning model to detect **emotions from text**, especially from social media-style messages (e.g., tweets, comments). The model classifies text into one of six categories:
 
-Group Members:
+> **joy**, **sadness**, **anger**, **fear**, **love**, and **surprise**
 
-Jenil Kevadiya (Matriculation No.: 22204227)
-Om Vaghasiya (Matriculation No.: 22205283)
-Krunal Koladiya (Matriculation No.: 22306168)
-Venkat Rajasekar (Matriculation No: 22308591)
+The goal is to enable real-time analysis of public sentiment, identify emotional cues in crisis communication, and assess the emotional impact of global events.
 
-Features
-Deep Learning Model: Utilizes a Bidirectional LSTM (Long Short-Term Memory) network.
+---
 
-Word Embeddings: Leverages pre-trained GloVe (Global Vectors for Word Representation) embeddings.
+## 👥 Group Members
 
-Data Preprocessing: Includes text cleaning, stop word removal, and lemmatization.
+- **Jenil Kevadiya** (Matriculation No.: 22204227)  
+- **Om Vaghasiya** (Matriculation No.: 22205283)  
+- **Krunal Koladiya** (Matriculation No.: 22306168)  
+- **Venkat Rajasekar** (Matriculation No.: 22308591)
 
-Cross-Validation: Employs Stratified K-Fold cross-validation for robust model evaluation.
+---
 
-GUI (Optional): The main.py script includes a Tkinter-based GUI for interactive emotion prediction.
+## 🚀 Features
 
-Dataset
-The model is trained on the "Emotions Dataset for NLP" available on Kaggle:
-https://www.kaggle.com/datasets/praveengovi/emotions-dataset-for-nlp
+- ✅ **Bidirectional LSTM Model** for emotion classification  
+- 🔤 **GloVe Word Embeddings** for semantic understanding  
+- 🧹 **Preprocessing Pipeline**: cleaning, stopword removal, lemmatization  
+- 🔁 **Stratified K-Fold Cross-Validation**  
+- 🖥️ **Tkinter GUI (Optional)** for real-time predictions (`main.py`)
+
+---
+
+## 📂 Dataset
+
+- 📥 Download the dataset from Kaggle:  
+  [Emotions Dataset for NLP (Kaggle)](https://www.kaggle.com/datasets/praveengovi/emotions-dataset-for-nlp)
+
+### Expected Directory Structure:
 
 The dataset is expected to be in a directory structure like:
 
@@ -34,23 +43,27 @@ Dataset/
 ├── val.txt
 └── test.txt
 
-And GloVe embeddings in:
-You need to download the glove file from the given link : https://www.kaggle.com/datasets/incorpes/glove6b200d
-
 Glove/
 └── glove.6B.200d.txt
 
-(Adjust paths in the script/notebook if your structure differs).
+(
+> 🔗 [Download GloVe Embeddings (200d)](https://www.kaggle.com/datasets/incorpes/glove6b200d)
 
-Setup and Installation
-Prerequisites
-Python 3.x
+Ensure that the dataset and embeddings are placed in the correct directories and update paths in scripts if needed.
 
-pip (Python package installer)
+---
 
-Dependencies
-The required Python packages are listed in requirements.txt. To install them, navigate to the project directory in your terminal and run:
+## 🛠️ Setup & Installation
 
+### ✅ Prerequisites
+- Python 3.x
+- pip
+
+### 📦 Dependencies
+
+Install Python dependencies:
+
+```bash
 pip install -r requirements.txt
 
 Important Note on Graphviz (for model plotting):

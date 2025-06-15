@@ -30,9 +30,9 @@ The goal is to enable analysis of public sentiment, identify emotional cues in c
 
 * 🧹 **Preprocessing Pipeline**: cleaning, stopword removal, lemmatization
 
-* 🔁 **Stratified K-Fold Cross-Validation** (in `main.py`)
+* 🔁 **Stratified K-Fold Cross-Validation** 
 
-* 🖥️ **Tkinter GUI (Optional)** for real-time predictions (in `main.py` and adaptable to the notebook)
+* 🖥️ **Tkinter GUI (Optional)** for real-time predictions 
 
 ---
 
@@ -136,15 +136,11 @@ nltk.download('punkt')
 
 4. **Execute Cells:** Run the cells sequentially from top to bottom for the complete workflow, including data loading, preprocessing, model training, evaluation, and saving artifacts.
 
-*(Note:* The `main.py` script, if used for its K-Fold cross-validation or GUI, requires the same *setup steps as the Jupyter Notebook regarding dependencies, dataset, and GloVe files.)*
-
 ---
 
 ##  Project Structure & Key Files
 
 * **`Emotion_with_lstm.ipynb`**: The primary Jupyter Notebook detailing data exploration, preprocessing, model training (single split), and evaluation.
-
-* **`main.py` (Optional):** A Python script offering a more structured workflow with K-Fold cross-validation and an interactive Tkinter GUI.
 
 * **`requirements.txt`**: Lists Python package dependencies.
 
